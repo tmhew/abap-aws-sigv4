@@ -13,3 +13,7 @@ Refers to [AWS Documentation](https://docs.aws.amazon.com/index.html) for the li
 ```bash
  openssl s_client -connect ec2.amazonaws.com:443 -showcerts
 ```
+
+## Misc
+
++ [Clean ABAP style guide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md)
