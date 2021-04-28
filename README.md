@@ -1,6 +1,8 @@
 # AWS Signature V4 (ABAP)
 
-Wanted to extend to AWS but there isn't AWS SDK for ABAP? This implementation is based on AWS documentation [Signature Version 4 signing process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html). You can look at [ZAWS_SIGV4_UTILITIES](src/zaws_sigv4_utilities.clas.abap) for implementation details and the following examples for usages. You will need to provide AWS access and secret keys to run the examples.
+Wanted to extend to AWS but there isn't AWS SDK for ABAP? Now, you can call AWS API directly through AWS Sigv4 authentication. 
+
+This implementation is based on AWS documentation [Signature Version 4 signing process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html). You can look at [ZAWS_SIGV4_UTILITIES](src/zaws_sigv4_utilities.clas.abap) for implementation details and the following examples for usages. You will need to provide AWS access and secret keys to run the examples.
  
 |Example         |Documentation|
 |----------------|-------------|
