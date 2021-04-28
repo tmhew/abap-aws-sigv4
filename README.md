@@ -1,4 +1,4 @@
-# AWS Signature V4 (ABAP)
+# AWS Signature V4 for ABAP
 
 Wanted to extend to AWS but there isn't AWS SDK for ABAP? Now, you can call AWS API directly with AWS Signature v4 authentication. 
 
