@@ -1,6 +1,6 @@
 # AWS Signature V4 (ABAP)
 
-The implementation is based on AWS documentation [Signature Version 4 signing process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html). You can look at `ZAWS_SIGV4_UTILITIES` for implementation details and `ZAWS_EXAMPLE_*` for usages. 
+The implementation is based on AWS documentation [Signature Version 4 signing process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html). You can look at [ZAWS_SIGV4_UTILITIES](src/zaws_sigv4_utilities.clas.abap) for implementation details and the following examples for usages.
  
 |Example         |Documentation|
 |----------------|-------------|
