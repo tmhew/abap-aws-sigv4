@@ -18,4 +18,5 @@ Refers to [AWS Documentation](https://docs.aws.amazon.com/index.html) for the li
 
 ## Misc
 
-+ [Clean ABAP style guide](https://github.com/SAP/styleguides/blob/main/clean-abap/CleanABAP.md)
++ [ABAP SDK for Azure](https://github.com/microsoft/ABAP-SDK-for-Azure)
++ [Access Google APIs using the OAuth 2.0 Client API](https://wiki.scn.sap.com/wiki/display/Security/Access+Google+APIs+using+the+OAuth+2.0+Client+API)
