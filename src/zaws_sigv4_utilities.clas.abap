@@ -4,8 +4,6 @@ class zaws_sigv4_utilities definition
   create public .
 
   public section.
-    interfaces if_oo_adt_classrun.
-
     types: begin of name,
              name type string,
            end of name.
@@ -85,6 +83,8 @@ class zaws_sigv4_utilities definition
                                            returning value(authorization_header) type string.
   protected section.
   private section.
+    class-methods escape_url importing url type string
+                             returning value(escaped_url) type string.
 endclass.
 
 
@@ -172,8 +172,7 @@ class zaws_sigv4_utilities implementation.
     sort http_query_parameters by name ascending.
 
     loop at http_query_parameters into data(query_parameter).
-      query_parameter-value = cl_http_utility=>if_http_utility~escape_url( query_parameter-value ).
-      replace all occurrences of '%2f' in query_parameter-value with '%2F'.
+      query_parameter-value = zaws_sigv4_utilities=>escape_url( query_parameter-value ).
 
       if canonical_querystring is initial.
         canonical_querystring = |{ query_parameter-name }={ query_parameter-value }|.
@@ -234,12 +233,17 @@ class zaws_sigv4_utilities implementation.
     authorization_header = |{ algorithm } Credential={ credential }, SignedHeaders={ signed_headers }, Signature={ signature }|.
   endmethod.
 
-  method if_oo_adt_classrun~main.
-    data(canonical_headers) = zaws_sigv4_utilities=>get_signed_headers( http_header_names = value #(
-        ( name = `x-amz-date` )
-        ( name = `Host` )
-    ) ).
+  method escape_url.
+    data(escaped) = cl_http_utility=>if_http_utility~escape_url( url ).
+    escaped_url = escaped.
 
-    out->write( |{ canonical_headers }x| ).
+    find all occurrences of regex `%\w{2}` in escaped results data(results).
+
+    loop at results into data(result).
+      data(target) = substring( val = escaped off = result-offset len = result-length ).
+      replace all occurrences of target
+        in escaped_url
+        with to_upper( target ).
+    endloop.
   endmethod.
 endclass.
