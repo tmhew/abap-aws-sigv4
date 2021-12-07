@@ -19,4 +19,5 @@ Refers to [AWS Documentation](https://docs.aws.amazon.com/index.html) for the li
 ## Misc
 
 + [ABAP SDK for Azure](https://github.com/microsoft/ABAP-SDK-for-Azure)
++ [Azure - Components of a REST API request/response](https://docs.microsoft.com/en-us/rest/api/azure/#components-of-a-rest-api-requestresponse)
 + [Access Google APIs using the OAuth 2.0 Client API](https://wiki.scn.sap.com/wiki/display/Security/Access+Google+APIs+using+the+OAuth+2.0+Client+API)
